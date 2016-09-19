@@ -33,6 +33,10 @@
 (definition new-user [PersistentArrayMap] :-> User)
 (defn new-user [u] (map->User u))
 
+(definition user-address [User] :-> Address)
+(defn user-address [user]
+  (:address user))
+
 (deftest a-test
   (testing "deftype"
     (let [u (new-user {:firstname "Matthew" :lastname "Boston"
