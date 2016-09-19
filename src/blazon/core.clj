@@ -4,10 +4,6 @@
   "(enum #{:foo :bar :baz})"
   [values])
 
-(defn maybe
-  "(maybe String)"
-  [type])
-
 (defn just
   "(just String)"
   [type])
@@ -24,3 +20,8 @@
   [f in-types out-type])
 
 (deftype Nothing)
+
+(defn maybe
+  "(maybe String)"
+  [type]
+  (either (just type) Nothing))
