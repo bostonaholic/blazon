@@ -16,8 +16,8 @@
   (let [fields (apply hash-map fields)]))
 
 (defmacro definition
-  "(definition foo [Integer] String)"
-  [f in-types out-type])
+  "(definition foo [Integer] :-> String)"
+  [f in-types arrow-key out-type])
 
 (deftype Nothing)
 

@@ -14,14 +14,14 @@
     :state State
     :zip String)
 
-(definition new-address [PesistentArrayMap] Address)
+(definition new-address [PesistentArrayMap] :-> Address)
 (defn new-address [a] (map->Address a))
 
 (deftype PhoneNumber
     :number String
     :county-code String)
 
-(definition new-phone-number [PesistentArrayMap] PhoneNumber)
+(definition new-phone-number [PesistentArrayMap] :-> PhoneNumber)
 (defn new-phone-number [p] (map->PhoneNumber p))
 
 (deftype User
@@ -30,7 +30,7 @@
     :address Address
     :phone-number PhoneNumber)
 
-(definition new-user [PersistentArrayMap] User)
+(definition new-user [PersistentArrayMap] :-> User)
 (defn new-user [u] (map->User u))
 
 (deftest a-test
