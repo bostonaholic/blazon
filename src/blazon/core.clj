@@ -1,16 +1,26 @@
 (ns blazon.core)
 
-(defn enum [values]) ; (enum #{:foo :bar :baz})
+(defn enum
+  "(enum #{:foo :bar :baz})"
+  [values])
 
-(defn maybe [type]) ; (maybe String)
+(defn maybe
+  "(maybe String)"
+  [type])
 
-(defn just [type]) ; (just String)
+(defn just
+  "(just String)"
+  [type])
 
-(defn either [& types]) ; (either String Integer Nothing)
+(defn either
+  "(either String Integer Nothing)"
+  [& types])
 
 (defmacro deftype [t & fields]
   (let [fields (apply hash-map fields)]))
 
-(defmacro definition [f in-types out-type])
+(defmacro definition
+  "(definition foo [Integer] String)"
+  [f in-types out-type])
 
 (deftype Nothing)
